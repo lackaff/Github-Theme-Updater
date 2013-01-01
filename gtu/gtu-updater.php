@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Theme Updater
-Plugin URI: https://github.com/UCF/Theme-Updater
+Original Plugin Name: Theme Updater
+Original Plugin URI: https://github.com/UCF/Theme-Updater
 Description: A theme updater for GitHub hosted Wordpress themes.  This Wordpress plugin automatically checks GitHub for theme updates and enables automatic install.  For more information read <a href="https://github.com/UCF/Theme-Updater/blob/master/readme.markdown">plugin documentation</a>.
 Author: Douglas Beck
 Author: UCF Web Communications
