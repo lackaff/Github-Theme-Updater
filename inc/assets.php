@@ -193,7 +193,8 @@ class Github_Theme_Upgrader extends Theme_Upgrader {
 			$source_files = array_keys( $wp_filesystem->dirlist($source) );
 
 		//Protection against deleting files in any important base directories.
-		if ( in_array( $destination, array(ABSPATH, WP_CONTENT_DIR, WP_PLUGIN_DIR, WP_CONTENT_DIR . '/themes') ) ) {
+		$theme_root = get_theme_root();
+		if ( in_array( $destination, array(ABSPATH, dirname($theme_root), dirname($theme_root).'/plugins', $theme_root) ) ) {
 			$remote_destination = trailingslashit($remote_destination) . trailingslashit(basename($source));
 			$destination = trailingslashit($destination) . trailingslashit(basename($source));
 		}
