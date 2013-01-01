@@ -49,7 +49,7 @@ class WPGitHubUpdater {
 			'proper_folder_name' => dirname( plugin_basename(__FILE__) ),
 			'api_url' => 'https://api.github.com/repos/afragen/'.GTU_GIT,
 			'raw_url' => 'https://raw.github.com/afragen/'.GTU_GIT.'/master',
-			'github_url' => 'https://github.com/afragen/.'GTU_GIT,
+			'github_url' => 'https://github.com/afragen/'.GTU_GIT,
 			'zip_url' => 'https://github.com/afragen/'.GTU_GIT.'/zipball/master',
 			'sslverify' => true,
 			'requires' => $wp_version,
