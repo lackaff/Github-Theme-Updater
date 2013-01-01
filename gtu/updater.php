@@ -18,8 +18,10 @@ function github_extra_theme_headers( $headers ) {
 //disable updater during core wordpress updates
 if(!empty($_GET['action']) && ($_GET['action'] == 'do-core-reinstall' || $_GET['action'] == 'do-core-upgrade')); 
 else {
-	add_filter('site_transient_update_themes', 'transient_update_themes_filter');
-	require_once('assets.php');
+	if ( is_admin() ) {
+		add_filter('site_transient_update_themes', 'transient_update_themes_filter');
+		require_once('assets.php');
+	}
 }
 
 function transient_update_themes_filter($data){
@@ -105,9 +107,12 @@ function transient_update_themes_filter($data){
 			set_transient(md5($url), $response, 30);
 		}
 		
-		// Sort and get latest tag
-		$tags = array_map(create_function('$t', 'return $t->name;'), $response);
-		usort($tags, "version_compare");
+			// Sort and get latest tag
+			$tags = array();
+			foreach($response as $num => $tag)
+				$tags[] = $tag->name;
+			usort($tags, "version_compare");
+
 		
 		
 		// check for rollback
