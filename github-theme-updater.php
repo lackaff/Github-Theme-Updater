@@ -6,7 +6,7 @@ Description: A theme updater for GitHub hosted Wordpress themes.  This Wordpress
 Author: Douglas Beck
 Author: UCF Web Communications
 Original Vers: 1.3.7
-Version: 1.5
+Version: 1.5.1
 
 This is dummy to load original files and use for automatic updating.
 */
@@ -18,7 +18,6 @@ define('GTU_INCLUDES', GTU_DIR.'/includes');
 //define('GTU_VIEWS', GTU_DIR.'/views');
 //define('GTU_RESOURCES', plugin_dir_url(__FILE__).'resources');
 define('GTU_INC', GTU_DIR.'/inc');
-define('GIT_REPO', 'Github-Theme-Updater' );
 
 //Load base class
 require_once( GTU_INC.'/gtu-updater.php' );
@@ -30,10 +29,10 @@ if ( is_admin() ) {
 	$config = array(		
 		'slug' => plugin_basename(__FILE__),
 		'proper_folder_name' => dirname( plugin_basename(__FILE__) ),
-		'api_url' => 'https://api.github.com/repos/afragen/'.GIT_REPO,
-		'raw_url' => 'https://raw.github.com/afragen/'.GIT_REPO.'/master',
-		'github_url' => 'https://github.com/afragen/'.GIT_REPO,
-		'zip_url' => 'https://github.com/afragen/'.GIT_REPO.'/zipball/master',
+		'api_url' => 'https://api.github.com/repos/afragen/Github-Theme-Updater',
+		'raw_url' => 'https://raw.github.com/afragen/Github-Theme-Updater/master',
+		'github_url' => 'https://github.com/afragen/Github-Theme-Updater',
+		'zip_url' => 'https://github.com/afragen/Github-Theme-Updater/zipball/master',
 		'sslverify' => true,
 		'requires' => $wp_version,
 		'tested' => $wp_version,
