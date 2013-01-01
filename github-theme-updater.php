@@ -16,15 +16,16 @@ define('GTU_CLASSES', GTU_DIR.'/classes');
 define('GTU_INCLUDES', GTU_DIR.'/includes');
 //define('GTU_VIEWS', GTU_DIR.'/views');
 //define('GTU_RESOURCES', plugin_dir_url(__FILE__).'resources');
+define('GTU_INC', GTU_DIR.'/inc');
 define('GTU_GIT', 'Github-Theme-Updater' );
 
 //Load base class
-require_once( GTU_INCLUDES.'/gtu-updater.php' );
+require_once( GTU_INC.'/gtu-updater.php' );
 
 // GithubUpdater
 if ( is_admin() ) {
 	global $wp_version;
-	include_once( DRMC_INCLUDES.'/updater.php' );
+	include_once( GTU_INCLUDES.'/updater.php' );
 	$config = array(		
 		'slug' => plugin_basename(__FILE__),
 		'proper_folder_name' => dirname( plugin_basename(__FILE__) ),
