@@ -6,7 +6,7 @@ Description: A theme updater for GitHub hosted Wordpress themes.  This Wordpress
 Author: Douglas Beck
 Author: UCF Web Communications
 Original Vers: 1.3.7
-Version: 1.4
+Version: 1.5
 
 This is dummy to load original files and use for automatic updating.
 */
