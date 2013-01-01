@@ -19,7 +19,7 @@ define('GTU_INCLUDES', GTU_DIR.'/includes');
 define('GTU_GIT', 'Github-Theme-Updater' );
 
 //Load base class
-require_once( GTU_INCLUDES.'/updater.php' );
+require_once( GTU_INCLUDES.'/gtu-updater.php' );
 
 // GithubUpdater
 if ( is_admin() ) {
