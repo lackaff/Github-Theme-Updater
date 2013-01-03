@@ -29,7 +29,7 @@ if ( is_admin() ) {
 	include_once( GTU_INCLUDES.'/updater.php' );
 		$config = array(
 			'slug' => plugin_basename( __FILE__ ),
-			'proper_folder_name' => 'Github-Theme-Updater',
+			'proper_folder_name' => basename($repo),
 			'api_url' => 'https://api.github.com/repos/'.$repo,
 			'raw_url' => 'https://raw.github.com/'.$repo.'/master',
 			'github_url' => 'https://github.com/'.$repo,
