@@ -7,7 +7,7 @@ Author: Andy Fragen
 Original Author: Douglas Beck
 Original Author: UCF Web Communications
 Original Vers: 1.3.7
-Version: 1.5.7
+Version: 1.5.7.1
 
 This is dummy to load original files and use for automatic updating.
 */
@@ -16,4 +16,4 @@ This is dummy to load original files and use for automatic updating.
 require_once( 'updater.php' );
 
 //Load GithubUpdater
-require_once( dirname(__FILE__).'/updater/updater.php');
+require_once( dirname(__FILE__).'/updater/updater-settings.php');
