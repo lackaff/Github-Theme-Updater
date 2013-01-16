@@ -124,7 +124,7 @@ function transient_update_themes_filter($data){
 		
 		
 		// check and generate download link
-		$newest_tag = array_pop($tags);
+		$newest_tag = end(array_values($tags));
 		if(version_compare($theme['Version'], $newest_tag, '>=')){
 			// up-to-date!
 			$data->up_to_date[$theme_key]['rollback'] = $tags;
